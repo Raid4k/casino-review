@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    @extend .font;
+    font-size: 15px;
+    color: $fffcolor;
+    background: url("../img/background.svg"), #fff;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    @include breakpoint(md-min) {
+        font-size: 13px;
+        transition: font-size .3s;
+        background: url("../img/background768.svg"), #fff;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+    }
+    @include breakpoint(sm-min){
+        font-size: 12px;
+    }
+
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: 'InterMedium';
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.wrapper {
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
